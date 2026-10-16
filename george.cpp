@@ -2,20 +2,16 @@
 using namespace std;
 
 int main(){
-    int n;
+    int n , a, b;
     cin >> n;
-    int a;
-    int b;
     int count=0;
     
     for(int i = 0; i < n; i++){
         cin >> a;
         cin >> b;
-        if(b>a){
-            count++;
+        if(b - a >= 2){
+            count = count + 1;
             
-        } else {
-            return 0;
         }
     }
     cout << count;

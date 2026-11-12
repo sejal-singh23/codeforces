@@ -1,25 +1,24 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main(){
-    int t;
-    cin >> t;
-    string arr;
-    while(t--){
-        
-        cin >> arr;
+    string s;
+    getline(cin, s);
+    int n = s.size() - 1;
+    for(int i = n; i > 0; i--){
+        if(s[i] != ' ' && s[i] != '?'){
+            if(s[i] == 'e' || s[i] == 'a' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u' || s[i] =='y' || s[i] == 'A' || 
+            s[i] == 'E' || s[i] == 'I' || s[i] == 'O'|| s[i] == 'U' || s[i] == 'Y'){
+            cout << "YES";
+            break;
+        } else {
+            cout << "NO";
+            break;
+            }
+        }
     }
-    int add_first = 0;
-    int add_last = 0;
-    for(int i = 0; i < 3; i++){
-        add_first = add_first + arr[i] - '0'; 
-    }
-    for(int i = 5; i >= 3; i--){
-        add_last = add_last + arr[i] - '0';
-    }
-    if(add_first == add_last){
-        cout << "YES";
-    } else {
-        cout << "NO";
-    }
+    
+    
+    
 }
